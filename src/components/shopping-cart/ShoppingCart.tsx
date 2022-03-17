@@ -1,7 +1,11 @@
-import Header from '../header/header';
+import Header from '../Header/Header';
 import './shopping-cart.css';
 
-const ShoppingCart = () => {
+/**
+ * returns ShoppingCart element
+ * @returns ShoppingCart element
+ */
+const ShoppingCart = (): JSX.Element => {
   return (
     <>
       <div className="shopping-cart">

@@ -1,5 +1,10 @@
-import './header.css';
+import NavBar from '../NavBar/NavBar';
+import './Header.css';
 
+/**
+ * Returns Header element
+ * @returns Header element
+ */
 const Header = (): JSX.Element => {
   return (
     <>
@@ -7,7 +12,7 @@ const Header = (): JSX.Element => {
       <div className="optimax-logo optimax-logo-header">
         <h1 className="h1-invisible">Shopping cart</h1>
       </div>
-      <div>NavBar</div>
+      <NavBar additionalClassName={"navigation-bar-header"}/>
     </header>
     </>
   )
