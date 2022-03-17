@@ -1,5 +1,5 @@
 import { CartItemsAction, CartItemsActionTypes } from "../../interfaces/cartItemAction"
-import { CartState } from "../../interfaces/CartState"
+import { CartState } from "../../interfaces/cartState"
 
 
 /**
