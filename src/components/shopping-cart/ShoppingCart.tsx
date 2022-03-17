@@ -1,10 +1,11 @@
+import Header from '../header/header';
 import './shopping-cart.css';
 
 const ShoppingCart = () => {
   return (
     <>
       <div className="shopping-cart">
-        <header>Header</header>
+        <Header></Header>
         <main className="main">
           <div>ToggleAddItemFormButton</div>
           <div>AddItemForm</div>
