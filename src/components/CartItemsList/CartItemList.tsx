@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { useActions } from '../../hooks/useActions';
 import useTypedSelector from '../../hooks/useTypedSelector';
+import CartItemView from '../CartItemView/CartItemView';
 import './CartItemList.css';
 
 /**
@@ -24,7 +25,7 @@ const CartItemList = (): JSX.Element => {
   }
   
   return (
-    <div>Items list</div>
+    <CartItemView />
   )
 }
 

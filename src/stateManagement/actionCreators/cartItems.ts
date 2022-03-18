@@ -14,7 +14,7 @@ export const fetchCartItems = () => {
       setTimeout(() => {
         dispatch({
           type: CartItemsActionTypes.FETCH_CART_ITEMS_SUCCESS,
-          payload: response.data
+          payload: response.data.items
         });
       }, 800);
     } catch(error) {
