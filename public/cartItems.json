@@ -1,0 +1,39 @@
+{
+  "items":[
+    {
+      "id":1,
+      "name":"CARRERA 166/S KY2",
+      "price":11990,
+      "quantity":1,
+      "imageUrl":"https://masterglasses.ru/catalog_imgs/item_tms/img_124371.jpg"
+    },
+    {
+      "id":2,
+      "name":"CARRERA 183/F/S V81",
+      "price":11990,
+      "quantity":2,
+      "imageUrl":"https://masterglasses.ru/catalog_imgs/item_tms/img_24289.jpg"
+    },
+    {
+      "id":3,
+      "name":"CARRERA 196/F/S 807",
+      "price":9790,
+      "quantity":3,
+      "imageUrl":"https://masterglasses.ru/catalog_imgs/item_tms/img_40938.jpg"
+    },
+    {
+      "id":4,
+      "name":"Silhouette 5418 6055 54/17",
+      "price":18000,
+      "quantity":4,
+      "imageUrl":"https://masterglasses.ru/catalog_imgs/item_tms/img_131209.jpg"
+    },
+    {
+      "id":5,
+      "name":"Vogue VO4094 323",
+      "price":4575,
+      "quantity":5,
+      "imageUrl":"https://masterglasses.ru/catalog_imgs/item_tms/img_56788.jpg"
+    }
+  ]
+}
