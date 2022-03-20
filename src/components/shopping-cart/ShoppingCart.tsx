@@ -15,6 +15,7 @@ const ShoppingCart = (): JSX.Element => {
         <main className="main">
           <div>ToggleAddItemFormButton</div>
           <div>AddItemForm</div>
+          <h2 className="cart-name">Items in your cart</h2>
           <CartItemList />
         </main>
         <aside>Aside</aside>

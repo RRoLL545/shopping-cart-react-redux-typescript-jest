@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { useActions } from '../../hooks/useActions';
 import useTypedSelector from '../../hooks/useTypedSelector';
+import CartItemView from '../CartItemView/CartItemView';
 import './CartItemList.css';
 
 /**
@@ -22,10 +23,29 @@ const CartItemList = (): JSX.Element => {
   if (errorStatus) {
     return <h1>{errorMessage}</h1>
   }
+  if (!cartItems.length) return (
+    <div className="cart-items">
+      {'Your cart is empty.'}
+    </div>
+  )
   
   return (
-    <div>Items list</div>
+    <>
+    {cartItems.map(cartItem => {
+      return (
+        <CartItemView id={cartItem.id} imageUrl={cartItem.imageUrl} name={cartItem.name} price={cartItem.price} quantity={cartItem.quantity} key={cartItem.id}/>
+      )
+    })}
+    </>
   )
 }
+//<CartItemView />
+export default CartItemList;
 
-export default CartItemList
+/*
+cartItems.map(cartItem => {
+      return (
+        <div>cartItem.id</div>
+      )
+    })
+    */

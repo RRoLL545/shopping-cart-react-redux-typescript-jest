@@ -1,0 +1,32 @@
+.cart-item {
+  width: 90%;
+  margin-bottom: 20px;
+  position: relative;
+  background-color: lemonchiffon;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  height: 80px;
+  padding: 10px;
+  padding-right: 30px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+
+.item-img {
+  height: 80px;
+  border-radius: 10px;
+}
+
+.item-info {
+  flex-basis: 300px;
+  margin-left: 40px;
+}
+
+.item-name {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
