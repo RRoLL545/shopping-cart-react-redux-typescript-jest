@@ -21,7 +21,8 @@ const initialState: CartState = {
  * @returns new store state
  */
 export const cartItemsReducer = (state: CartState = initialState, action: CartItemsAction): CartState => {
-  //let nextState = state;
+  const itemsList = state.cartItems;
+
   switch (action.type) {
     case CartItemsActionTypes.FETCH_CART_ITEMS:
       return {
@@ -45,26 +46,31 @@ export const cartItemsReducer = (state: CartState = initialState, action: CartIt
         errorStatus: true
       }
     case CartItemsActionTypes.DECREMENT_CART_ITEM_COUNT:
-      const decrementItemsList = state.cartItems;
-      decrementItemsList.forEach(item => {
+      itemsList.forEach(item => {
         if(item.id === action.payload) {
           if(item.quantity > 1) item.quantity--
         }
       })
       return {
         ItemsLoading: false,
-        cartItems: [...decrementItemsList],
+        cartItems: [...itemsList],
         errorMessage: '',
         errorStatus: false
       }
     case CartItemsActionTypes.INCREMENT_CART_ITEM_COUNT:
-      const incrementItemsList = state.cartItems;
-      incrementItemsList.forEach(item => {
+      itemsList.forEach(item => {
         if(item.id === action.payload) item.quantity++
       })
       return {
         ItemsLoading: false,
-        cartItems: [...incrementItemsList],
+        cartItems: [...itemsList],
+        errorMessage: '',
+        errorStatus: false
+      }
+    case CartItemsActionTypes.REMOVE_CART_ITEM:
+      return {
+        ItemsLoading: false,
+        cartItems: [...itemsList.filter(item => item.id !== action.payload)],
         errorMessage: '',
         errorStatus: false
       }

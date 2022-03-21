@@ -19,9 +19,9 @@ const CountControl = (props: CountControlData): JSX.Element => {
 
   return (
     <div className={`item-control-tab`}>
-      <button className="controls-button item-control item-minus" data-item-id={id} onClick={decrementButtonClicked}>-</button>
+      <button className="controls-button item-control item-minus" data-item-id={id} onClick={decrementCartItemCount}>-</button>
       <div className={`item-quantity item-id-${id}`}>{count}</div>
-      <button className="controls-button item-control item-plus" data-item-id={id} onClick={incrementButtonClicked}>+</button>
+      <button className="controls-button item-control item-plus" data-item-id={id} onClick={incrementCartItemCount}>+</button>
     </div>
   )
 }
@@ -32,7 +32,7 @@ export default CountControl;
  * Decrement item count
  * @param e mouse left button click event
  */
-const decrementButtonClicked = (e: React.MouseEvent<HTMLButtonElement>): void => {
+const decrementCartItemCount = (e: React.MouseEvent<HTMLButtonElement>): void => {
   const clickedButton = e.target as HTMLButtonElement;
   const itemId: number = parseInt(clickedButton.dataset.itemId as unknown as string, 10);
   //TODO error
@@ -43,7 +43,7 @@ const decrementButtonClicked = (e: React.MouseEvent<HTMLButtonElement>): void =>
  * Increment item count
  * @param e mouse left button click event
  */
-const incrementButtonClicked = (e: React.MouseEvent<HTMLButtonElement>): void =>{
+const incrementCartItemCount = (e: React.MouseEvent<HTMLButtonElement>): void =>{
   const clickedButton = e.target as HTMLButtonElement;
   const itemId: number = parseInt(clickedButton.dataset.itemId as unknown as string, 10);
   //TODO error

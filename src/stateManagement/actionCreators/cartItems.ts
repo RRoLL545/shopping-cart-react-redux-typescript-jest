@@ -51,3 +51,14 @@ export const decrementItemCount = (id: number): void => {
     payload: id
   })
 }
+
+/**
+ * Dispatch remove cart item action
+ * @param id id of removing item
+ */
+export const removeCartItem = (id: number): void => {
+  store.dispatch({
+    type: CartItemsActionTypes.REMOVE_CART_ITEM,
+    payload: id
+  })
+}
