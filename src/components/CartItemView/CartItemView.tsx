@@ -1,4 +1,5 @@
 import { ItemData } from '../../interfaces/itemData';
+import CartItemRemove from '../CartItemRemove/CartItemRemove';
 import CountControl from '../CountControl/CountControl';
 import './CartItemView.css';
 
@@ -18,9 +19,8 @@ const CartItemView = (props: ItemData): JSX.Element => {
         <div>Price: {price} rub.</div>
       </div>
       <div className="item-controls">
-        {/*<QuantityControl quantity={quantity} id={id} />
-        <ItemDelete id={id} />*/}
         <CountControl id={id} count={quantity}/>
+        <CartItemRemove id={id} />
       </div>
     </div>
   )
