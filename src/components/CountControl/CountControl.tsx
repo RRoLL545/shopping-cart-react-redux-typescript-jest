@@ -1,4 +1,4 @@
-import { decrementItemCount } from '../../stateManagement/actionCreators/cartItems';
+import { decrementItemCount, incrementItemCount } from '../../stateManagement/actionCreators/cartItems';
 import './CountControl.css'
 
 /**
@@ -14,7 +14,7 @@ interface CountControlData {
  * @param props - item id and item count in the cart
  * @returns CountControl component
  */
-const CountControl = (props: CountControlData) => {
+const CountControl = (props: CountControlData): JSX.Element => {
   const {count, id} = props;
 
   return (
@@ -28,13 +28,11 @@ const CountControl = (props: CountControlData) => {
 
 export default CountControl;
 
-
 /**
  * Decrement item count
  * @param e mouse left button click event
  */
 const decrementButtonClicked = (e: React.MouseEvent<HTMLButtonElement>): void => {
-  /*store.dispatch( actions.countMinus(itemId) );*/
   const clickedButton = e.target as HTMLButtonElement;
   const itemId: number = parseInt(clickedButton.dataset.itemId as unknown as string, 10);
   //TODO error
@@ -42,20 +40,14 @@ const decrementButtonClicked = (e: React.MouseEvent<HTMLButtonElement>): void =>
 }
 
 /**
- * Encrement item count
+ * Increment item count
  * @param e mouse left button click event
  */
 const incrementButtonClicked = (e: React.MouseEvent<HTMLButtonElement>): void =>{
-  /*store.dispatch( actions.countPlus(itemId) );*/
   const clickedButton = e.target as HTMLButtonElement;
-  const itemId = clickedButton.dataset.itemId;
+  const itemId: number = parseInt(clickedButton.dataset.itemId as unknown as string, 10);
+  //TODO error
+  incrementItemCount(itemId);
 }
 
-//TODO заменить на одну чистую функцию с передачей id
-
-// const decrementItemCount = (id: number): CartItemsAction => {
-//   return {
-//     type: CartItemsActionTypes.DECREMENT_CART_ITEM_COUNT,
-//     payload: id
-//   }
-// }
+//TODO заменить на одну чистую функцию с передачей id и textContent

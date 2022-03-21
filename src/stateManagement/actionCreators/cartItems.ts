@@ -5,7 +5,7 @@ import {cartItemsUrl} from '../../config/url';
 import { store } from "..";
 
 /**
- * Fetch cart items data
+ * Dispatch Fetch cart items data action
  * @returns 
  */
 export const fetchCartItems = () => {
@@ -31,7 +31,7 @@ export const fetchCartItems = () => {
 }
 
 /**
- * Dispatch action DECREMENT_CART_ITEM_COUNT to cart item reducer
+ * Dispatch decrement cart item count action
  * @param id id of decreasing count item
  */
 export const decrementItemCount = (id: number): void => {
@@ -41,3 +41,13 @@ export const decrementItemCount = (id: number): void => {
   })
 }
 
+/**
+ * Dispatch increment cart item count action
+ * @param id id of increasing count item
+ */
+ export const incrementItemCount = (id: number): void => {
+  store.dispatch({
+    type: CartItemsActionTypes.INCREMENT_CART_ITEM_COUNT,
+    payload: id
+  })
+}

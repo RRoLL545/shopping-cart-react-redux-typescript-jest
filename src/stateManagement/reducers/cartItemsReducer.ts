@@ -45,15 +45,26 @@ export const cartItemsReducer = (state: CartState = initialState, action: CartIt
         errorStatus: true
       }
     case CartItemsActionTypes.DECREMENT_CART_ITEM_COUNT:
-      const itemsList = state.cartItems;
-      itemsList.forEach(item => {
+      const decrementItemsList = state.cartItems;
+      decrementItemsList.forEach(item => {
         if(item.id === action.payload) {
           if(item.quantity > 1) item.quantity--
         }
       })
       return {
         ItemsLoading: false,
-        cartItems: [...itemsList],
+        cartItems: [...decrementItemsList],
+        errorMessage: '',
+        errorStatus: false
+      }
+    case CartItemsActionTypes.INCREMENT_CART_ITEM_COUNT:
+      const incrementItemsList = state.cartItems;
+      incrementItemsList.forEach(item => {
+        if(item.id === action.payload) item.quantity++
+      })
+      return {
+        ItemsLoading: false,
+        cartItems: [...incrementItemsList],
         errorMessage: '',
         errorStatus: false
       }

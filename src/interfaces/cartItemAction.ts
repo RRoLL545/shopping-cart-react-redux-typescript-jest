@@ -7,7 +7,8 @@ export enum CartItemsActionTypes {
   FETCH_CART_ITEMS = 'FETCH_CART_ITEMS',
   FETCH_CART_ITEMS_SUCCESS = 'FETCH_CART_ITEMS_SUCCESS',
   FETCH_CART_ITEMS_ERROR = 'FETCH_CART_ITEMS_ERROR',
-  DECREMENT_CART_ITEM_COUNT = 'DECREMENT_CART_ITEM_COUNT'
+  DECREMENT_CART_ITEM_COUNT = 'DECREMENT_CART_ITEM_COUNT',
+  INCREMENT_CART_ITEM_COUNT = 'INCREMENT_CART_ITEM_COUNT'
 }
 
 /**
@@ -33,8 +34,19 @@ interface FetchCartItemsErrorAction {
   payload: string
 }
 
+/**
+ * Decrement Cart Item Count interface
+ */
 interface DecrementCartItemCount {
   type: CartItemsActionTypes.DECREMENT_CART_ITEM_COUNT,
+  payload: number
+}
+
+/**
+ * Increment Cart Item Count interface
+ */
+interface IncrementCartItemCount {
+  type: CartItemsActionTypes.INCREMENT_CART_ITEM_COUNT,
   payload: number
 }
 
@@ -44,4 +56,5 @@ interface DecrementCartItemCount {
 export type CartItemsAction = FetchCartItemsAction | 
                               FetchCartItemsSuccessAction | 
                               FetchCartItemsErrorAction |
-                              DecrementCartItemCount;
+                              DecrementCartItemCount |
+                              IncrementCartItemCount;
