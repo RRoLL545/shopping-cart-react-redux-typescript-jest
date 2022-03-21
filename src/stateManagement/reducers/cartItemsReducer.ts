@@ -1,7 +1,5 @@
-import { Console } from "console";
 import { CartItemsAction, CartItemsActionTypes } from "../../interfaces/cartItemAction"
 import { CartState } from "../../interfaces/cartState"
-import { ItemData } from "../../interfaces/itemData";
 
 
 /**
