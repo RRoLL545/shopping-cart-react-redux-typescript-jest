@@ -2,8 +2,12 @@ import axios from "axios";
 import { Dispatch } from "react";
 import { CartItemsAction, CartItemsActionTypes } from "../../interfaces/cartItemAction";
 import {cartItemsUrl} from '../../config/url';
+import { store } from "..";
 
-
+/**
+ * Dispatch Fetch cart items data action
+ * @returns 
+ */
 export const fetchCartItems = () => {
   return async (dispatch: Dispatch<CartItemsAction>) => {
     try {
@@ -24,4 +28,26 @@ export const fetchCartItems = () => {
       })
     }
   }
+}
+
+/**
+ * Dispatch decrement cart item count action
+ * @param id id of decreasing count item
+ */
+export const decrementItemCount = (id: number): void => {
+  store.dispatch({
+    type: CartItemsActionTypes.DECREMENT_CART_ITEM_COUNT,
+    payload: id
+  })
+}
+
+/**
+ * Dispatch increment cart item count action
+ * @param id id of increasing count item
+ */
+ export const incrementItemCount = (id: number): void => {
+  store.dispatch({
+    type: CartItemsActionTypes.INCREMENT_CART_ITEM_COUNT,
+    payload: id
+  })
 }

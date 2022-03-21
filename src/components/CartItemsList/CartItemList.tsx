@@ -39,13 +39,5 @@ const CartItemList = (): JSX.Element => {
     </>
   )
 }
-//<CartItemView />
-export default CartItemList;
 
-/*
-cartItems.map(cartItem => {
-      return (
-        <div>cartItem.id</div>
-      )
-    })
-    */
+export default CartItemList;

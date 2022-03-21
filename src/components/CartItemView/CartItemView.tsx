@@ -1,8 +1,10 @@
 import { ItemData } from '../../interfaces/itemData';
+import CountControl from '../CountControl/CountControl';
 import './CartItemView.css';
 
 /**
  * Returns CartItemView component
+ * @param props item data
  * @returns CartItemView component
  */
 const CartItemView = (props: ItemData): JSX.Element => {
@@ -18,7 +20,7 @@ const CartItemView = (props: ItemData): JSX.Element => {
       <div className="item-controls">
         {/*<QuantityControl quantity={quantity} id={id} />
         <ItemDelete id={id} />*/}
-        'Controls'
+        <CountControl id={id} count={quantity}/>
       </div>
     </div>
   )
