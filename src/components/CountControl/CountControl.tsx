@@ -1,3 +1,4 @@
+import { decrementItemCount } from '../../stateManagement/actionCreators/cartItems';
 import './CountControl.css'
 
 /**
@@ -32,20 +33,29 @@ export default CountControl;
  * Decrement item count
  * @param e mouse left button click event
  */
-function decrementButtonClicked(e: React.MouseEvent<HTMLButtonElement>): void {
+const decrementButtonClicked = (e: React.MouseEvent<HTMLButtonElement>): void => {
   /*store.dispatch( actions.countMinus(itemId) );*/
   const clickedButton = e.target as HTMLButtonElement;
-  const itemId = clickedButton.dataset.itemId;
+  const itemId: number = parseInt(clickedButton.dataset.itemId as unknown as string, 10);
+  //TODO error
+  decrementItemCount(itemId);
 }
 
 /**
  * Encrement item count
  * @param e mouse left button click event
  */
-function incrementButtonClicked(e: React.MouseEvent<HTMLButtonElement>): void {
+const incrementButtonClicked = (e: React.MouseEvent<HTMLButtonElement>): void =>{
   /*store.dispatch( actions.countPlus(itemId) );*/
   const clickedButton = e.target as HTMLButtonElement;
   const itemId = clickedButton.dataset.itemId;
 }
 
 //TODO заменить на одну чистую функцию с передачей id
+
+// const decrementItemCount = (id: number): CartItemsAction => {
+//   return {
+//     type: CartItemsActionTypes.DECREMENT_CART_ITEM_COUNT,
+//     payload: id
+//   }
+// }
