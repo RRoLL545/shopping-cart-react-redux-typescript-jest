@@ -1,3 +1,5 @@
+import { StateStep } from '../../interfaces/cartItemAction';
+import GoToStep from '../GoToStep/GoToStep';
 import SummaryTable from '../SummaryTable/SummaryTable';
 import './CheckOutData.css'
 
@@ -10,8 +12,8 @@ const CheckOutData = ():JSX.Element => {
     <div className="checkout-data">
       <h4 className="checkout-data-name">Your cart summary</h4>
       <SummaryTable />
-      {/*<ProceedButton />*/
-      /*TODO кнопка вернуться*/}
+      <GoToStep extraClass="proceed-button" name="Proceed" step={StateStep.CHECKOUT} />
+      <GoToStep extraClass="proceed-button" name="Back" step={StateStep.CART_MANAGE} />
     </div>
   )
 }

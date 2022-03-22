@@ -14,9 +14,8 @@ import './shopping-cart.css';
  */
 const ShoppingCart = (): JSX.Element => {
   const {stateStep} = useTypedSelector(state => state.cartState);
-  console.log('stateStep', stateStep);
 
-  if (stateStep === 'CHECKOUT') return (
+  if (stateStep === StateStep.CHECKOUT) return (
     <div className="proceed-info invisible">You were redirected to checkout page...</div>
   )
 
@@ -24,16 +23,15 @@ const ShoppingCart = (): JSX.Element => {
     <>
       <div className="shopping-cart">
         <Header />
-        <main className={`main ${stateStep === 'CART_MANAGE' ? '' : 'overlay'}`}>
+        <main className={`main ${stateStep === StateStep.CART_MANAGE ? '' : 'overlay'}`}>
           <div>ToggleAddItemFormButton</div>
           <div>AddItemForm</div>
           <h2 className="cart-name">Items in your cart</h2>
           <CartItemList />
         </main>
-        <aside className={`aside ${stateStep === 'CART_MANAGE' ? '' : 'overlay'}`}>
+        <aside className={`aside ${stateStep === StateStep.CART_MANAGE ? '' : 'overlay'}`}>
           <div >
             <CartSummary />
-            <GoToStep extraClass="total-checkout" name="Checkout" step={StateStep.CHECKOUT_CHECK} />
           </div>
         </aside>
         <Footer />
