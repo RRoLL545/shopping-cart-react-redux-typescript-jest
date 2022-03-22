@@ -36,7 +36,7 @@ const ShoppingCart = (): JSX.Element => {
         </aside>
         <Footer />
       </div>
-      {stateStep === 'CHECKOUT_CHECK' ? <CheckOutData /> : <></>}
+      {stateStep === StateStep.CHECKOUT_CHECK ? <CheckOutData /> : <></>}
     </>
   )
 }
