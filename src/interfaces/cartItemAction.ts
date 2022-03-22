@@ -9,7 +9,17 @@ export enum CartItemsActionTypes {
   FETCH_CART_ITEMS_ERROR = 'FETCH_CART_ITEMS_ERROR',
   DECREMENT_CART_ITEM_COUNT = 'DECREMENT_CART_ITEM_COUNT',
   INCREMENT_CART_ITEM_COUNT = 'INCREMENT_CART_ITEM_COUNT',
-  REMOVE_CART_ITEM = 'REMOVE_CART_ITEM'
+  REMOVE_CART_ITEM = 'REMOVE_CART_ITEM',
+  GO_TO_STATE_STEP = 'GO_TO_STATE_STEP'
+}
+
+/**
+ * Values of State Steps Names
+ */
+export enum StateStep {
+  CART_MANAGE = 'CART_MANAGE',
+  CHECKOUT_CHECK = 'CHECKOUT_CHECK',
+  CHECKOUT = 'CHECKOUT'
 }
 
 /**
@@ -59,6 +69,11 @@ interface RemoveCartItem {
   payload: number
 }
 
+interface GoToStateStep {
+  type: CartItemsActionTypes.GO_TO_STATE_STEP,
+  payload: StateStep
+}
+
 /**
  * Cart items action types
  */
@@ -67,4 +82,5 @@ export type CartItemsAction = FetchCartItemsAction |
                               FetchCartItemsErrorAction |
                               DecrementCartItemCount |
                               IncrementCartItemCount |
-                              RemoveCartItem;
+                              RemoveCartItem |
+                              GoToStateStep;

@@ -1,3 +1,4 @@
+import { StateStep } from '../../interfaces/cartItemAction';
 import CartItemList from '../CartItemsList/CartItemList';
 import CartSummary from '../CartSummary/CartSummary';
 import CheckOutData from '../CheckOutData/CheckOutData';
@@ -24,7 +25,7 @@ const ShoppingCart = (): JSX.Element => {
         <aside className="aside">
           <div >
             <CartSummary />
-            <GoToStep extraClass="lol" name="LOL" step="looooool" />
+            <GoToStep extraClass="total-checkout" name="Checkout" step={StateStep.CHECKOUT_CHECK} />
           </div>
         </aside>
         <Footer />

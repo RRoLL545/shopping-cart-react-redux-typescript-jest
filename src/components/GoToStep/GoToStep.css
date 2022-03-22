@@ -1,0 +1,10 @@
+.total-checkout-wrapper {
+  margin-top: 30px;
+  padding-right: 30px;
+  text-align: right;
+}
+
+.total-checkout {
+  height: 30px;
+  width: 100px;
+}
