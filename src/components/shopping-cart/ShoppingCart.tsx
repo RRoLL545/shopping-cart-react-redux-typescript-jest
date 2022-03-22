@@ -1,5 +1,6 @@
 import CartItemList from '../CartItemsList/CartItemList';
 import CartSummary from '../CartSummary/CartSummary';
+import CheckOutData from '../CheckOutData/CheckOutData';
 import Footer from '../Footer/Footer';
 import Header from '../Header/Header';
 import './shopping-cart.css';
@@ -26,7 +27,7 @@ const ShoppingCart = (): JSX.Element => {
         </aside>
         <Footer />
       </div>
-      <div>Checkoutdata</div>
+      <CheckOutData />
       <div className="proceed-info invisible">You were redirected to checkout page...</div>
     </>
   )
