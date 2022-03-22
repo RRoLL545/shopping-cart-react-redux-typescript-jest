@@ -1,4 +1,4 @@
-import { CartItemsAction, CartItemsActionTypes } from "../../interfaces/cartItemAction"
+import { CartItemsAction, CartItemsActionTypes, StateStep } from "../../interfaces/cartItemAction"
 import { CartState } from "../../interfaces/cartState"
 
 
@@ -9,7 +9,8 @@ const initialState: CartState = {
   cartItems: [],
   itemsLoading: false,
   errorMessage: '',
-  errorStatus: false
+  errorStatus: false,
+  stateStep: StateStep.CART_MANAGE
 }
 
 /**
@@ -27,21 +28,24 @@ export const cartItemsReducer = (state: CartState = initialState, action: CartIt
         itemsLoading: true,
         cartItems: [],
         errorMessage: '',
-        errorStatus: false
+        errorStatus: false,
+        stateStep: StateStep.CART_MANAGE
       }
     case CartItemsActionTypes.FETCH_CART_ITEMS_SUCCESS:
       return {
         itemsLoading: false,
         cartItems: action.payload,
         errorMessage: '',
-        errorStatus: false
+        errorStatus: false,
+        stateStep: StateStep.CART_MANAGE
       }
     case CartItemsActionTypes.FETCH_CART_ITEMS_ERROR:
       return {
         itemsLoading: false,
         cartItems: [],
         errorMessage: action.payload,
-        errorStatus: true
+        errorStatus: true,
+        stateStep: StateStep.CART_MANAGE
       }
     case CartItemsActionTypes.DECREMENT_CART_ITEM_COUNT:
       itemsList.forEach(item => {
@@ -53,7 +57,8 @@ export const cartItemsReducer = (state: CartState = initialState, action: CartIt
         itemsLoading: false,
         cartItems: [...itemsList],
         errorMessage: '',
-        errorStatus: false
+        errorStatus: false,
+        stateStep: StateStep.CART_MANAGE
       }
     case CartItemsActionTypes.INCREMENT_CART_ITEM_COUNT:
       itemsList.forEach(item => {
@@ -63,14 +68,24 @@ export const cartItemsReducer = (state: CartState = initialState, action: CartIt
         itemsLoading: false,
         cartItems: [...itemsList],
         errorMessage: '',
-        errorStatus: false
+        errorStatus: false,
+        stateStep: StateStep.CART_MANAGE
       }
     case CartItemsActionTypes.REMOVE_CART_ITEM:
       return {
         itemsLoading: false,
         cartItems: [...itemsList.filter(item => item.id !== action.payload)],
         errorMessage: '',
-        errorStatus: false
+        errorStatus: false,
+        stateStep: StateStep.CART_MANAGE
+      }
+    case CartItemsActionTypes.GO_TO_STATE_STEP:
+      return {
+        itemsLoading: false,
+        cartItems: [...itemsList],
+        errorMessage: '',
+        errorStatus: false,
+        stateStep: action.payload
       }
     default:
       return state;

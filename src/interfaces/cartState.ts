@@ -1,3 +1,4 @@
+import { StateStep } from "./cartItemAction";
 import { ItemData } from "./itemData";
 
 /**
@@ -23,4 +24,9 @@ export interface CartState {
    * Error message
    */
   errorMessage: string
+
+  /**
+   * Procedure step
+   */
+  stateStep: StateStep
 }

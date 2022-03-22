@@ -1,6 +1,6 @@
 import axios from "axios";
 import { Dispatch } from "react";
-import { CartItemsAction, CartItemsActionTypes } from "../../interfaces/cartItemAction";
+import { CartItemsAction, CartItemsActionTypes, StateStep } from "../../interfaces/cartItemAction";
 import {cartItemsUrl} from '../../config/url';
 import { store } from "..";
 
@@ -60,5 +60,16 @@ export const removeCartItem = (id: number): void => {
   store.dispatch({
     type: CartItemsActionTypes.REMOVE_CART_ITEM,
     payload: id
+  })
+}
+
+/**
+ * Dispatch go to state step
+ * @param step state step name
+ */
+export const goToStateStep = (step: StateStep): void => {
+  store.dispatch({
+    type: CartItemsActionTypes.GO_TO_STATE_STEP,
+    payload: step
   })
 }
