@@ -9,7 +9,7 @@ import './CartItemView.css';
  * @returns CartItemView component
  */
 const CartItemView = (props: ItemData): JSX.Element => {
-  const {id, imageUrl, name, price, quantity} = props;
+  const {id, imageUrl, name, price, count} = props;
   
   return (
     <div className={`cart-item cart-item-${id}`} key={id}>
@@ -19,7 +19,7 @@ const CartItemView = (props: ItemData): JSX.Element => {
         <div>Price: {price} rub.</div>
       </div>
       <div className="item-controls">
-        <CountControl id={id} count={quantity}/>
+        <CountControl id={id} count={count}/>
         <CartItemRemove id={id} />
       </div>
     </div>

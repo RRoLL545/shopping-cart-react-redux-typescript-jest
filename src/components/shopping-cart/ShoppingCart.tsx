@@ -1,4 +1,5 @@
 import CartItemList from '../CartItemsList/CartItemList';
+import CartSummary from '../CartSummary/CartSummary';
 import Footer from '../Footer/Footer';
 import Header from '../Header/Header';
 import './shopping-cart.css';
@@ -18,7 +19,11 @@ const ShoppingCart = (): JSX.Element => {
           <h2 className="cart-name">Items in your cart</h2>
           <CartItemList />
         </main>
-        <aside>Aside</aside>
+        <aside className="aside">
+          <div >
+            <CartSummary />
+          </div>
+        </aside>
         <Footer />
       </div>
       <div>Checkoutdata</div>
