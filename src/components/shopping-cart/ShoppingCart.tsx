@@ -2,6 +2,7 @@ import CartItemList from '../CartItemsList/CartItemList';
 import CartSummary from '../CartSummary/CartSummary';
 import CheckOutData from '../CheckOutData/CheckOutData';
 import Footer from '../Footer/Footer';
+import GoToStep from '../GoToStep/GoToStep';
 import Header from '../Header/Header';
 import './shopping-cart.css';
 
@@ -23,6 +24,7 @@ const ShoppingCart = (): JSX.Element => {
         <aside className="aside">
           <div >
             <CartSummary />
+            <GoToStep extraClass="lol" name="LOL" step="looooool" />
           </div>
         </aside>
         <Footer />
