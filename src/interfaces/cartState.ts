@@ -12,7 +12,7 @@ export interface CartState {
   /**
    * Cart items data loading state
    */
-  ItemsLoading: boolean,
+  itemsLoading: boolean,
 
   /**
    * Error status of loading cart items data

@@ -7,7 +7,7 @@ import { CartState } from "../../interfaces/cartState"
  */
 const initialState: CartState = {
   cartItems: [],
-  ItemsLoading: false,
+  itemsLoading: false,
   errorMessage: '',
   errorStatus: false
 }
@@ -24,21 +24,21 @@ export const cartItemsReducer = (state: CartState = initialState, action: CartIt
   switch (action.type) {
     case CartItemsActionTypes.FETCH_CART_ITEMS:
       return {
-        ItemsLoading: true,
+        itemsLoading: true,
         cartItems: [],
         errorMessage: '',
         errorStatus: false
       }
     case CartItemsActionTypes.FETCH_CART_ITEMS_SUCCESS:
       return {
-        ItemsLoading: false,
+        itemsLoading: false,
         cartItems: action.payload,
         errorMessage: '',
         errorStatus: false
       }
     case CartItemsActionTypes.FETCH_CART_ITEMS_ERROR:
       return {
-        ItemsLoading: false,
+        itemsLoading: false,
         cartItems: [],
         errorMessage: action.payload,
         errorStatus: true
@@ -46,28 +46,28 @@ export const cartItemsReducer = (state: CartState = initialState, action: CartIt
     case CartItemsActionTypes.DECREMENT_CART_ITEM_COUNT:
       itemsList.forEach(item => {
         if(item.id === action.payload) {
-          if(item.quantity > 1) item.quantity--
+          if(item.count > 1) item.count--
         }
       })
       return {
-        ItemsLoading: false,
+        itemsLoading: false,
         cartItems: [...itemsList],
         errorMessage: '',
         errorStatus: false
       }
     case CartItemsActionTypes.INCREMENT_CART_ITEM_COUNT:
       itemsList.forEach(item => {
-        if(item.id === action.payload) item.quantity++
+        if(item.id === action.payload) item.count++
       })
       return {
-        ItemsLoading: false,
+        itemsLoading: false,
         cartItems: [...itemsList],
         errorMessage: '',
         errorStatus: false
       }
     case CartItemsActionTypes.REMOVE_CART_ITEM:
       return {
-        ItemsLoading: false,
+        itemsLoading: false,
         cartItems: [...itemsList.filter(item => item.id !== action.payload)],
         errorMessage: '',
         errorStatus: false

@@ -1,0 +1,23 @@
+.items-summary-table {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.table-head-name {
+  text-align: center;
+  font-weight: bold;
+  padding-bottom: 10px;
+}
+
+.table-cell {
+  padding: 2px 5px;
+}
+
+.table-cell-align-center {
+  text-align: center;
+}
+
+.summary-total {
+  text-align: right;
+  padding-top: 10px;
+}

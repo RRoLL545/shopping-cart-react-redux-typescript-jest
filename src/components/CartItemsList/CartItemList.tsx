@@ -9,7 +9,7 @@ import './CartItemList.css';
  * @returns CartItemList element
  */
 const CartItemList = (): JSX.Element => {
-  const {ItemsLoading, cartItems, errorMessage, errorStatus} = useTypedSelector(state => state.cartState);
+  const {itemsLoading, cartItems, errorMessage, errorStatus} = useTypedSelector(state => state.cartState);
 
   const {fetchCartItems} = useActions();
 
@@ -17,7 +17,7 @@ const CartItemList = (): JSX.Element => {
     fetchCartItems();
   }, []);
 
-  if (ItemsLoading) {
+  if (itemsLoading) {
     return <h1>Loading...</h1>
   }
   if (errorStatus) {
@@ -33,7 +33,7 @@ const CartItemList = (): JSX.Element => {
     <>
     {cartItems.map(cartItem => {
       return (
-        <CartItemView id={cartItem.id} imageUrl={cartItem.imageUrl} name={cartItem.name} price={cartItem.price} quantity={cartItem.quantity} key={cartItem.id}/>
+        <CartItemView id={cartItem.id} imageUrl={cartItem.imageUrl} name={cartItem.name} price={cartItem.price} count={cartItem.count} key={cartItem.id}/>
       )
     })}
     </>

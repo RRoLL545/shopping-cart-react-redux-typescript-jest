@@ -5,6 +5,6 @@ export interface ItemData {
   id: number;
   name: string;
   price: number;
-  quantity: number;
+  count: number;
   imageUrl: string;
 }
