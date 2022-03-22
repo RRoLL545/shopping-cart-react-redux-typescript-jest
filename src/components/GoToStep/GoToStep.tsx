@@ -1,3 +1,5 @@
+import { StateStep } from '../../interfaces/cartItemAction';
+import { goToStateStep } from '../../stateManagement/actionCreators/cartItems';
 import './GoToStep.css';
 
 /**
@@ -6,7 +8,7 @@ import './GoToStep.css';
 interface GoToStepButton {
   name: string
   extraClass: string,
-  step: string
+  step: StateStep
 }
 
 /**
@@ -16,7 +18,7 @@ interface GoToStepButton {
  */
 const GoToStep = (props: GoToStepButton): JSX.Element => {
   const {extraClass, name, step} = props;
-  console.log(extraClass, name, step);
+  
   return (
     <div className={`${extraClass}-wrapper`}>
       <button className={`controls-button ${extraClass}`} data-step={step} onClick={goToStep}>{name}</button>
@@ -26,9 +28,12 @@ const GoToStep = (props: GoToStepButton): JSX.Element => {
 
 export default GoToStep;
 
-
+/**
+ * Change state step
+ * @param e mouse left button click event
+ */
 const goToStep = (e: React.MouseEvent<HTMLButtonElement>): void => {
   const clickedButton = e.target as HTMLButtonElement;
-  const step: string = clickedButton.dataset.step as unknown as string;
-  console.log(step);
+  const step: StateStep = clickedButton.dataset.step as unknown as StateStep;
+  goToStateStep(step);
 }

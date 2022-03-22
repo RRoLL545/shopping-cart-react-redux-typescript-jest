@@ -7,7 +7,7 @@ import './CheckOutData.css'
  */
 const CheckOutData = ():JSX.Element => {
   return (
-    <div className="checkout-data invisible">
+    <div className="checkout-data">
       <h4 className="checkout-data-name">Your cart summary</h4>
       <SummaryTable />
       {/*<ProceedButton />*/

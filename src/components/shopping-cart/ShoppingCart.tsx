@@ -1,3 +1,4 @@
+import useTypedSelector from '../../hooks/useTypedSelector';
 import { StateStep } from '../../interfaces/cartItemAction';
 import CartItemList from '../CartItemsList/CartItemList';
 import CartSummary from '../CartSummary/CartSummary';
@@ -12,17 +13,24 @@ import './shopping-cart.css';
  * @returns ShoppingCart element
  */
 const ShoppingCart = (): JSX.Element => {
+  const {stateStep} = useTypedSelector(state => state.cartState);
+  console.log('stateStep', stateStep);
+
+  if (stateStep === 'CHECKOUT') return (
+    <div className="proceed-info invisible">You were redirected to checkout page...</div>
+  )
+
   return (
     <>
       <div className="shopping-cart">
         <Header />
-        <main className="main">
+        <main className={`main ${stateStep === 'CART_MANAGE' ? '' : 'overlay'}`}>
           <div>ToggleAddItemFormButton</div>
           <div>AddItemForm</div>
           <h2 className="cart-name">Items in your cart</h2>
           <CartItemList />
         </main>
-        <aside className="aside">
+        <aside className={`aside ${stateStep === 'CART_MANAGE' ? '' : 'overlay'}`}>
           <div >
             <CartSummary />
             <GoToStep extraClass="total-checkout" name="Checkout" step={StateStep.CHECKOUT_CHECK} />
@@ -30,8 +38,7 @@ const ShoppingCart = (): JSX.Element => {
         </aside>
         <Footer />
       </div>
-      <CheckOutData />
-      <div className="proceed-info invisible">You were redirected to checkout page...</div>
+      {stateStep === 'CHECKOUT_CHECK' ? <CheckOutData /> : <></>}
     </>
   )
 }
