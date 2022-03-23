@@ -9,9 +9,8 @@ import './ShopItemsForm.css';
 const ShopItemsForm = (): JSX.Element => {
   const [ searchTerm, setSearchTerm ] = useState('');
   const getSearchTerm = (e: React.FormEvent<HTMLInputElement>) => {
-      setSearchTerm(e.currentTarget.value);
-    };
-  console.log(searchTerm)
+    setSearchTerm(e.currentTarget.value);
+  };
 
   return (
     <>
@@ -21,7 +20,7 @@ const ShopItemsForm = (): JSX.Element => {
           <input id="search" type="search" className="search-input" placeholder="Type item name" onChange={getSearchTerm} />
           <div className="search-icon"></div>
         </div>
-        <ShopItemsList />
+        <ShopItemsList keyWord={searchTerm}/>
       <hr className="items-horizontal-divider" />
       </div>
     </>
