@@ -1,0 +1,26 @@
+.shop-item {
+  box-sizing: border-box;
+  width: 150px;
+  height: 200px;
+  padding: 5px;
+  background-color: lemonchiffon;
+  border-radius: 10px;
+  margin: 0 5px;
+
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.shop-item-img {
+  height: 80px;
+  border-radius: 8px;
+}
+
+.shop-item-name {
+  font-size: 0.8rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+  text-align: center;
+}
