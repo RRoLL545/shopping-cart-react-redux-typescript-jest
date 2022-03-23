@@ -1,6 +1,8 @@
-import * as CartItemsCreator from './cartItems'
+import * as CartItemsCreator from './cartItems';
+import * as ShopItemsCreator from './shopItems'
 
-const ActionCreator = {
-  ...CartItemsCreator
+export const ActionCreator = {
+  ...CartItemsCreator,
+  ...ShopItemsCreator
 }
-export default ActionCreator;
+ //default ActionCreator;

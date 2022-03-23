@@ -87,6 +87,19 @@ export const cartItemsReducer = (state: CartState = initialState, action: CartIt
         errorStatus: false,
         stateStep: action.payload
       }
+    case CartItemsActionTypes.ADD_ITEM_TO_CART:
+      if (itemsList.find(item => item.id === action.payload.id)) {
+        alert('Item is already in your cart!');
+        return state;
+      } else {
+        return {
+          itemsLoading: false,
+          cartItems: [action.payload, ...itemsList],
+          errorMessage: '',
+          errorStatus: false,
+          stateStep: StateStep.CART_MANAGE
+        }
+      }
     default:
       return state;
   }

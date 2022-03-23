@@ -3,6 +3,7 @@ import { Dispatch } from "react";
 import { CartItemsAction, CartItemsActionTypes, StateStep } from "../../interfaces/cartItemAction";
 import {cartItemsUrl} from '../../config/url';
 import { store } from "..";
+import { ItemData } from "../../interfaces/itemData";
 
 /**
  * Dispatch Fetch cart items data action
@@ -15,7 +16,7 @@ export const fetchCartItems = () => {
         type: CartItemsActionTypes.FETCH_CART_ITEMS
       });
       const response = await axios.get(cartItemsUrl);
-      setTimeout(() => {
+      setTimeout(() => { // emulation of waiting response from server process
         dispatch({
           type: CartItemsActionTypes.FETCH_CART_ITEMS_SUCCESS,
           payload: response.data.items
@@ -64,12 +65,23 @@ export const removeCartItem = (id: number): void => {
 }
 
 /**
- * Dispatch go to state step
+ * Dispatch go to state step action
  * @param step state step name
  */
 export const goToStateStep = (step: StateStep): void => {
   store.dispatch({
     type: CartItemsActionTypes.GO_TO_STATE_STEP,
     payload: step
+  })
+}
+
+/**
+ * Dispatch add shop item to the cart action
+ * @param shopItem shop item data
+ */
+export const addShopItemToCart = (shopItem: ItemData): void => {
+  store.dispatch({
+    type: CartItemsActionTypes.ADD_ITEM_TO_CART,
+    payload: shopItem
   })
 }

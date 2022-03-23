@@ -10,7 +10,8 @@ export enum CartItemsActionTypes {
   DECREMENT_CART_ITEM_COUNT = 'DECREMENT_CART_ITEM_COUNT',
   INCREMENT_CART_ITEM_COUNT = 'INCREMENT_CART_ITEM_COUNT',
   REMOVE_CART_ITEM = 'REMOVE_CART_ITEM',
-  GO_TO_STATE_STEP = 'GO_TO_STATE_STEP'
+  GO_TO_STATE_STEP = 'GO_TO_STATE_STEP',
+  ADD_ITEM_TO_CART = 'ADD_ITEM_TO_CART'
 }
 
 /**
@@ -75,6 +76,14 @@ interface GoToStateStep {
 }
 
 /**
+ * Add Shop Item To Cart Action interface
+ */
+interface AddItemToCartAction {
+  type: CartItemsActionTypes.ADD_ITEM_TO_CART,
+  payload: ItemData
+}
+
+/**
  * Cart items action types
  */
 export type CartItemsAction = FetchCartItemsAction | 
@@ -83,4 +92,5 @@ export type CartItemsAction = FetchCartItemsAction |
                               DecrementCartItemCount |
                               IncrementCartItemCount |
                               RemoveCartItem |
-                              GoToStateStep;
+                              GoToStateStep |
+                              AddItemToCartAction;

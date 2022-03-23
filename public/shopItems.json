@@ -1,0 +1,74 @@
+{
+  "items":[
+    {
+      "id":1,
+      "name":"CARRERA 166/S KY2",
+      "price":11990,
+      "count":1,
+      "imageUrl":"https://masterglasses.ru/catalog_imgs/item_tms/img_124371.jpg"
+    },
+    {
+      "id":2,
+      "name":"CARRERA 183/F/S V81",
+      "price":11990,
+      "count":2,
+      "imageUrl":"https://masterglasses.ru/catalog_imgs/item_tms/img_24289.jpg"
+    },
+    {
+      "id":3,
+      "name":"CARRERA 196/F/S 807",
+      "price":9790,
+      "count":3,
+      "imageUrl":"https://masterglasses.ru/catalog_imgs/item_tms/img_40938.jpg"
+    },
+    {
+      "id":4,
+      "name":"Silhouette 5418 6055 54/17",
+      "price":18000,
+      "count":4,
+      "imageUrl":"https://masterglasses.ru/catalog_imgs/item_tms/img_131209.jpg"
+    },
+    {
+      "id":5,
+      "name":"Vogue VO4094 323",
+      "price":4575,
+      "count":5,
+      "imageUrl":"https://masterglasses.ru/catalog_imgs/item_tms/img_56788.jpg"
+    },
+    {
+      "id":6,
+      "name":"Versace VE4361 GB1/87",
+      "price":15150,
+      "count":1,
+      "imageUrl":"https://masterglasses.ru/catalog_imgs/item_tms/img_82292.jpg"
+    },
+    {
+      "id":7,
+      "name":"Ray-Ban Original Wayfarer Classic RB2140 901",
+      "price":12160,
+      "count":1,
+      "imageUrl":"https://masterglasses.ru/catalog_imgs/item_tms/img_50736.jpg"
+    },
+    {
+      "id":8,
+      "name":"Silhouette 8625 6128 0/0",
+      "price":18000,
+      "count":1,
+      "imageUrl":"https://masterglasses.ru/catalog_imgs/item_tms/img_77977.jpg"
+    },
+    {
+      "id":9,
+      "name":"Prada Linea Rossa PS01US DG05S0",
+      "price":12000,
+      "count":1,
+      "imageUrl":"https://masterglasses.ru/catalog_imgs/item_tms/img_74958.jpg"
+    },
+    {
+      "id":10,
+      "name":"Armani exchange AX4080S 80786G Matte Black",
+      "price":5625,
+      "count":1,
+      "imageUrl":"https://masterglasses.ru/catalog_imgs/item_tms/img_96884.jpg"
+    }
+  ]
+}
