@@ -15,7 +15,7 @@ export const fetchCartItems = () => {
         type: CartItemsActionTypes.FETCH_CART_ITEMS
       });
       const response = await axios.get(cartItemsUrl);
-      setTimeout(() => {
+      setTimeout(() => { // emulation of waiting response from server process
         dispatch({
           type: CartItemsActionTypes.FETCH_CART_ITEMS_SUCCESS,
           payload: response.data.items

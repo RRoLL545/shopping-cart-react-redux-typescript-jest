@@ -4,8 +4,8 @@ import CartItemList from '../CartItemsList/CartItemList';
 import CartSummary from '../CartSummary/CartSummary';
 import CheckOutData from '../CheckOutData/CheckOutData';
 import Footer from '../Footer/Footer';
-import GoToStep from '../GoToStep/GoToStep';
 import Header from '../Header/Header';
+import ShopItemsForm from '../ShopItemsForm/ShopItemsForm';
 import './shopping-cart.css';
 
 /**
@@ -25,7 +25,7 @@ const ShoppingCart = (): JSX.Element => {
         <Header />
         <main className={`main ${stateStep === StateStep.CART_MANAGE ? '' : 'overlay'}`}>
           <div>ToggleAddItemFormButton</div>
-          <div>AddItemForm</div>
+          <ShopItemsForm />
           <h2 className="cart-name">Items in your cart</h2>
           <CartItemList />
         </main>
