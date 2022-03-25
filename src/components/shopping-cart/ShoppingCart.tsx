@@ -1,11 +1,13 @@
 import useTypedSelector from '../../hooks/useTypedSelector';
 import { StateStep } from '../../interfaces/cartItemAction';
+import { ShopStateStep } from '../../interfaces/shopItemAction';
 import CartItemList from '../CartItemsList/CartItemList';
 import CartSummary from '../CartSummary/CartSummary';
 import CheckOutData from '../CheckOutData/CheckOutData';
 import Footer from '../Footer/Footer';
 import Header from '../Header/Header';
 import ShopItemsForm from '../ShopItemsForm/ShopItemsForm';
+import ToggleShopForm from '../ToggleShopForm/ToggleShopForm';
 import './shopping-cart.css';
 
 /**
@@ -14,6 +16,7 @@ import './shopping-cart.css';
  */
 const ShoppingCart = (): JSX.Element => {
   const {stateStep} = useTypedSelector(state => state.cartState);
+  const {shopStateStep} = useTypedSelector(state => state.shopState);
 
   if (stateStep === StateStep.CHECKOUT) return (
     <div className="proceed-info invisible">You were redirected to checkout page...</div>
@@ -24,8 +27,8 @@ const ShoppingCart = (): JSX.Element => {
       <div className="shopping-cart">
         <Header />
         <main className={`main ${stateStep === StateStep.CART_MANAGE ? '' : 'overlay'}`}>
-          <div>ToggleAddItemFormButton</div>
-          <ShopItemsForm />
+          <ToggleShopForm />
+          {(shopStateStep === ShopStateStep.SHOW_SHOP || shopStateStep === ShopStateStep.FETCH_SHOP) && <ShopItemsForm />}
           <h2 className="cart-name">Items in your cart</h2>
           <CartItemList />
         </main>

@@ -70,6 +70,9 @@ interface RemoveCartItem {
   payload: number
 }
 
+/**
+ * Go To State Step Action interface
+ */
 interface GoToStateStep {
   type: CartItemsActionTypes.GO_TO_STATE_STEP,
   payload: StateStep

@@ -1,7 +1,8 @@
 import axios from "axios";
 import { Dispatch } from "react";
+import { store } from "..";
 import { shopItemsUrl } from "../../config/url";
-import { ShopItemsAction, ShopItemsActionTypes } from "../../interfaces/shopItemAction";
+import { ShopItemsAction, ShopItemsActionTypes, ShopStateStep } from "../../interfaces/shopItemAction";
 
 /**
  * Dispatch Fetch shop items data action
@@ -27,4 +28,15 @@ export const fetchShopItems = () => {
       })
     }
   }
+}
+
+/**
+ * Dispatch go to state step action
+ * @param step state step name
+ */
+ export const goToShopStateStep = (step: ShopStateStep): void => {
+  store.dispatch({
+    type: ShopItemsActionTypes.GO_TO_SHOP_STATE_STEP,
+    payload: step
+  })
 }

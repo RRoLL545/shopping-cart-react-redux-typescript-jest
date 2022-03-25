@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import { useActions } from '../../hooks/useActions';
 import useTypedSelector from '../../hooks/useTypedSelector';
 import { ItemData } from '../../interfaces/itemData';
+import { ShopStateStep } from '../../interfaces/shopItemAction';
 import ShopItemView from '../ShopItemView/ShopItemView';
 import './ShopItemsList.css';
 
@@ -12,14 +13,14 @@ import './ShopItemsList.css';
  */
 const ShopItemsList = (props: {keyWord: string}): JSX.Element => {
   const {keyWord} = props;
-  const {errorMessage, errorStatus, itemsLoading, shopItems} = useTypedSelector(state => state.shopState);
+  const {errorMessage, errorStatus, itemsLoading, shopItems, shopStateStep} = useTypedSelector(state => state.shopState);
   const {fetchShopItems} = useActions();
   useEffect(() => {
-    fetchShopItems();
+    shopStateStep === ShopStateStep.FETCH_SHOP && fetchShopItems();
   }, []);
   
   if (itemsLoading) {
-    return <h1>Loading...</h1>
+    return <h1>Wait a moment...</h1>
   }
   if (errorStatus) {
     return <h1>{errorMessage}</h1>
