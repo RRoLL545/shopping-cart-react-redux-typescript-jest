@@ -4,8 +4,6 @@ import { ShopStateStep } from '../../interfaces/shopItemAction';
 import CartItemList from '../CartItemsList/CartItemList';
 import CartSummary from '../CartSummary/CartSummary';
 import CheckOutData from '../CheckOutData/CheckOutData';
-import Footer from '../Footer/Footer';
-import Header from '../Header/Header';
 import ShopItemsForm from '../ShopItemsForm/ShopItemsForm';
 import ToggleShopForm from '../ToggleShopForm/ToggleShopForm';
 import './ShoppingCart.css';
@@ -25,7 +23,6 @@ const ShoppingCart = (): JSX.Element => {
   return (
     <>
       <div className="shopping-cart">
-        <Header />
         <main className={`main ${stateStep === StateStep.CART_MANAGE ? '' : 'overlay'}`}>
           <ToggleShopForm />
           {(shopStateStep === ShopStateStep.SHOW_SHOP || shopStateStep === ShopStateStep.FETCH_SHOP) && <ShopItemsForm />}
@@ -37,7 +34,6 @@ const ShoppingCart = (): JSX.Element => {
         <aside className={`aside ${stateStep === StateStep.CART_MANAGE ? '' : 'overlay'}`}>
             <CartSummary />
         </aside>
-        <Footer />
       </div>
       {stateStep === StateStep.CHECKOUT_CHECK ? <CheckOutData /> : <></>}
     </>

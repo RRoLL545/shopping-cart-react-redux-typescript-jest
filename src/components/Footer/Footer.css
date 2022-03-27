@@ -13,7 +13,7 @@
   flex-wrap: nowrap;
   justify-content: space-around;
   align-items: center;
-  height: 60%;
+  height: 59%;
 }
 
 .social-links {
@@ -63,7 +63,7 @@
 }
 
 .footer-hr {
-  height: 2px;
+  height: 1%;
   background-color: gray;
 }
 
