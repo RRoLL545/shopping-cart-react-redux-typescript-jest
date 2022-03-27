@@ -27,13 +27,18 @@ const ShopItemsList = (props: {keyWord: string}): JSX.Element => {
   }
   if (!shopItems.length) return (
     <div className="shop-items-list">
-      {'Strange. There are no items in the shop?'}
+      Strange. There are no items in the shop?
+    </div>
+  )
+  if (!keyWord) return (
+    <div className="shop-items-list">
+      Find items to add them in your cart
     </div>
   )
 
-  const foundShopItems: ItemData[] = keyWord ? shopItems.filter( item => {
+  const foundShopItems: ItemData[] = shopItems.filter( item => {
     return item.name.toLowerCase().replace(/\s/g, '').includes(keyWord.toLowerCase());
-  }) : shopItems;
+  });
 
   return (
     <div className="shop-items-list">
