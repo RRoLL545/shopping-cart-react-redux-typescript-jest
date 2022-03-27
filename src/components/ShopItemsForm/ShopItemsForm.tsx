@@ -14,8 +14,8 @@ const ShopItemsForm = (): JSX.Element => {
 
   return (
     <>
-      <div className="add-new-item"> {/* добавить invisible */}
-        <h3 className="add-new-item-name">Add new item in to your cart</h3>
+      <div className="add-new-item">
+        <h3 className="add-new-item-name">Add new items in to your cart</h3>
         <div className="search-input-wrapper">
           <input id="search" type="search" className="search-input" placeholder="Type item name" onChange={getSearchTerm} />
           <div className="search-icon"></div>

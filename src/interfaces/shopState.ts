@@ -1,4 +1,5 @@
 import { ItemData } from "./itemData";
+import { ShopStateStep } from "./shopItemAction";
 
 
 /**
@@ -24,4 +25,9 @@ import { ItemData } from "./itemData";
    * Error message
    */
   errorMessage: string
+
+  /**
+   * Procedure step
+   */
+   shopStateStep: ShopStateStep
 }
