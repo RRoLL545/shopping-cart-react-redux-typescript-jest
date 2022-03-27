@@ -20,10 +20,18 @@ const ShopItemsList = (props: {keyWord: string}): JSX.Element => {
   }, []);
   
   if (itemsLoading) {
-    return <h1>Wait a moment...</h1>
+    return (
+      <div className="shop-items-list">
+        Wait a moment...
+      </div>
+    )
   }
   if (errorStatus) {
-    return <h1>{errorMessage}</h1>
+    return (
+      <div className="shop-items-list">
+        {errorMessage}
+      </div>
+    )
   }
   if (!shopItems.length) return (
     <div className="shop-items-list">

@@ -1,0 +1,29 @@
+<svg width="33.866666" height="33.866668" xmlns="http://www.w3.org/2000/svg">
+ <defs>
+  <clipPath id="clipPath3457" clipPathUnits="userSpaceOnUse">
+   <rect fill="#1a1a1a" stroke-width="0.264583" stroke-linecap="square" stroke-dasharray="0.264583, 1.05833" y="114.49826" x="-262.11121" width="61.739258" ry="2.645833" rx="2.645833" id="rect3459" height="58.93293"/>
+  </clipPath>
+  <clipPath id="clipPath3791" clipPathUnits="userSpaceOnUse">
+   <ellipse fill="#f979e8" stroke="#000080" stroke-width="2.64583" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="4" stroke-dashoffset="0" ry="42.469128" rx="45.275459" id="ellipse3793" cy="29.747097" cx="-93.170158"/>
+  </clipPath>
+  <clipPath id="clipPath71886" clipPathUnits="userSpaceOnUse">
+   <rect fill="none" stroke="#1e9a4a" stroke-width="0.264583" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="4" stroke-dasharray="0.264583, 1.05833" stroke-dashoffset="0" y="-9.525" x="-482.60001" width="182.57619" ry="2.38125" rx="2.38125" id="rect71888" height="171.67012"/>
+  </clipPath>
+  <clipPath id="clipPath71892" clipPathUnits="userSpaceOnUse">
+   <rect fill="none" stroke="#1e9a4a" stroke-width="0.264583" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="4" stroke-dasharray="0.264583, 1.05833" stroke-dashoffset="0" y="-33.866665" x="-225.425" width="184.14999" ry="2.38125" rx="2.38125" id="rect71894" height="131.23334"/>
+  </clipPath>
+  <clipPath id="clipPath73580" clipPathUnits="userSpaceOnUse">
+   <rect fill="none" stroke="#007cdc" stroke-width="0.264999" stroke-linecap="square" stroke-dasharray="0.264999, 1.06" y="28.063299" x="-186.71449" width="142.18739" ry="2.38125" rx="2.38125" id="rect73582" height="93.170158"/>
+  </clipPath>
+ </defs>
+ <g>
+  <title>background</title>
+  <rect fill="none" id="canvas_background" height="402" width="582" y="-1" x="-1"/>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <g id="layer1">
+   <path fill="#ffffff" stroke-width="0.223898" stroke-linecap="square" id="path73586" d="m27.49766,7.30006c-0.86566,0 -1.59421,0.17421 -1.95049,1.4107c-0.47504,1.64866 -2.54546,5.2743 -3.71908,7.09062c-0.83545,1.29296 -1.94281,0.39347 -2.0093,-0.16067c-0.16766,-1.39717 0,-6.73435 0,-6.73435c0,-1.0511 -0.65055,-1.59277 -1.36923,-1.59277l-5.3696,0c-0.87985,0 -1.32249,1.06893 -0.06069,1.8495c1.09417,0.67687 1.38844,0.71795 1.38844,1.67136l0,6.03651c0,0.516 -0.77759,1.0956 -1.42511,0.43313c-0.9689,-0.99127 -4.30328,-8.00652 -4.30328,-8.00652c0,0 -0.87993,-1.98398 -3.22658,-1.98398l-3.67498,0c-0.40629,0 -0.95475,0.52706 -0.61869,1.18235c0,0 3.99939,9.65967 7.65997,13.62762c3.66058,3.96795 6.7064,4.44299 6.7064,4.44299l3.2315,0c0,0 1.1317,0.02794 1.1317,-1.1317l0,-3.31129c-0.04935,-0.78977 1.01428,-1.38696 1.93944,-0.38335l3.40953,3.69857c0.84188,0.88396 1.82011,1.12777 2.76028,1.12777l4.04138,0c0.62232,0 1.24221,-0.79677 0.23446,-1.80453l-4.901,-5.60045c0,0 -0.78241,-0.69859 -0.11177,-1.76043c0.67064,-1.06185 4.05841,-7.65648 4.22607,-8.10357c0.45183,-0.94881 0.13866,-1.98398 -0.98544,-1.98398c0,0 -2.86026,-0.01354 -3.00393,-0.01353z"/>
+  </g>
+ </g>
+</svg>
