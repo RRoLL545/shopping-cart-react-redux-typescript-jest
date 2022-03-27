@@ -20,4 +20,5 @@
   background-position: unset;
   background-repeat: no-repeat;
   background-size: 28px 28px;
+  transition: all 0.3s;
 }

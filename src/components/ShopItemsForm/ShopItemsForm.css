@@ -32,8 +32,3 @@
   left: 3px;
   z-index: 1000;
 }
-
-.invisible {
-  display: none;
-  position: absolute;
-}
