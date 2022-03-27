@@ -8,7 +8,7 @@ import Footer from '../Footer/Footer';
 import Header from '../Header/Header';
 import ShopItemsForm from '../ShopItemsForm/ShopItemsForm';
 import ToggleShopForm from '../ToggleShopForm/ToggleShopForm';
-import './shopping-cart.css';
+import './ShoppingCart.css';
 
 /**
  * returns ShoppingCart element

@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { store } from './stateManagement';
-import ShoppingCart from './components/shopping-cart/ShoppingCart';
+import ShoppingCart from './components/ShoppingCart/ShoppingCart';
 import './extra-styles/index.css';
 import './extra-styles/reset.css';
 import './extra-styles/media.css';
