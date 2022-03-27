@@ -22,19 +22,20 @@ html, body {
   font-family: 'Montserrat', sans-serif;
   font-size: 1em;
   color: #fe6637;
-  transition: .2s ease-in-out;
+  transition: all 0.3s;
 }
 
 .controls-button:hover {
   background-color: #fe6637;
   color: #ffffff;
   cursor: pointer;
+  transition: all 0.3s;
 }
 
 .button-rotated:hover {
-  
   background-color: #fe6637;
   color: #ffffff;
+  transition: all 0.3s;
 }
 
 .overlay:before {

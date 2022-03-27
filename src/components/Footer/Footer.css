@@ -77,7 +77,6 @@
 }
 
 .bottom-footer_github-link {
-  /*background: url("../../assets/img/github-logo.png") no-repeat center / contain;*/
   background: url("../../assets/svg/git-hub-logo.svg") no-repeat center / contain;
   height: 30px;
   width: 30px;
