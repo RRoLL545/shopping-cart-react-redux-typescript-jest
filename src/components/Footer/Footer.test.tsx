@@ -12,7 +12,8 @@ describe('Footer component testing', () => {
   it(`should render NavBar component with className="${navBarExtraClassName}" in Footer`, () => {
     render(<Footer />);
     const navBar = screen.getByRole('navigation');
+    
     expect(navBar).toBeEnabled();
-     expect(navBar.classList.contains(navBarExtraClassName)).toBeTruthy();
+    expect(navBar.classList.contains(navBarExtraClassName)).toBeTruthy();
   })
 })

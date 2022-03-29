@@ -12,7 +12,8 @@ describe('Header component testing', () => {
   it(`should render NavBar component with className="${navBarExtraClassName}" in Header`, () => {
     render(<Header />);
     const navBar = screen.getByRole('navigation');
+    
     expect(navBar).toBeEnabled();
-     expect(navBar.classList.contains(navBarExtraClassName)).toBeTruthy();
+    expect(navBar.classList.contains(navBarExtraClassName)).toBeTruthy();
   })
 })

@@ -18,6 +18,7 @@ describe('NavBar component testing', () => {
     it(`should render NavBar component with class "${testCase.result}"`, () => {
       render(<NavBar additionalClassName={testCase.input} />);
       const navBar = screen.getByRole('navigation');
+      
       expect(navBar).toBeEnabled();
       expect(navBar.classList.contains(testCase.classToCheck)).toBeTruthy();
     })
