@@ -10,14 +10,9 @@ describe('NavBar component testing', () => {
       result: 'navigation-bar'
     },
     {
-      input: 'header',
-      classToCheck: 'header',
-      result: 'navigation-bar header'
-    },
-    {
-      input: 'footer',
-      classToCheck: 'footer',
-      result: 'navigation-bar footer'
+      input: 'any-class-name',
+      classToCheck: 'any-class-name',
+      result: 'navigation-bar any-class-name'
     }
   ].forEach(testCase => {
     it(`should render NavBar component with class "${testCase.result}"`, () => {
