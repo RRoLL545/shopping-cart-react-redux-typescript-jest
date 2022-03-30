@@ -21,10 +21,8 @@ export default CartItemRemove;
  * Remove Cart Item from the Cart
  * @param e - mouse left button click event
  */
- function removeItemFromCart(e: React.MouseEvent<HTMLButtonElement>): void {
+function removeItemFromCart(e: React.MouseEvent<HTMLButtonElement>): void {
   const clickedButton = e.target as HTMLButtonElement;
   const itemId: number = parseInt(clickedButton.dataset.itemId as unknown as string, 10);
-  //console.log('removed', itemId);
-  // store.dispatch( actions.deleteCartItem(deleteCartItemId) );
   removeCartItem(itemId);
 }

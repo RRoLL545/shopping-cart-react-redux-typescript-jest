@@ -6,7 +6,7 @@ describe('CountControl component testing', () => {
     count: 10,
     id: 1
   }
-  it(`should render CountControl component which contains button with text "+" and data "${props.id}"`, () => {
+  it(`should render CountControl component which contains button with text "+" and data-item-id="${props.id}"`, () => {
     render(<CountControl count={props.count} id={props.id} />)
     const incrementButton = screen.getByText('+');
 
@@ -14,7 +14,7 @@ describe('CountControl component testing', () => {
     expect(incrementButton.dataset.itemId).toBe(`${props.id}`);
   })
   
-  it(`should render CountControl component which contains button with text "-" and data "${props.id}"`, () => {
+  it(`should render CountControl component which contains button with text "-" and data-item-id="${props.id}"`, () => {
     render(<CountControl count={props.count} id={props.id} />)
     const decrementButton = screen.getByText('-');
 
