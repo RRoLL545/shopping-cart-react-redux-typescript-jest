@@ -18,6 +18,7 @@ export enum CartItemsActionTypes {
  * Values of State Steps Names
  */
 export enum StateStep {
+  FETCH_CART_ITEMS = 'FETCH_CART_ITEMS',
   CART_MANAGE = 'CART_MANAGE',
   CHECKOUT_CHECK = 'CHECKOUT_CHECK',
   CHECKOUT = 'CHECKOUT'
