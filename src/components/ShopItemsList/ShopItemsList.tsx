@@ -19,6 +19,9 @@ const ShopItemsList = (props: {keyWord: string}): JSX.Element => {
     shopStateStep === ShopStateStep.FETCH_SHOP && fetchShopItems();
   }, []);
   
+  if (shopStateStep === ShopStateStep.NO_ACTION || shopStateStep === ShopStateStep.HIDE_SHOP) {
+    return <></>
+  }
   if (itemsLoading) {
     return (
       <div className="shop-items-list">

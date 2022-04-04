@@ -8,7 +8,7 @@ import CartItemList from './CartItemList';
 describe('CartItemList component testing', () => {
   let store = createStore(rootReducer, applyMiddleware(thunk));
 
-  it(`should render CartItemList component with "Loading"`, async () => {
+  it(`should render CartItemList component with "Loading"`, () => {
     render(<Provider store={store}><CartItemList /></Provider>);
     expect(screen.getByText('Loading...')).toBeEnabled();
   })

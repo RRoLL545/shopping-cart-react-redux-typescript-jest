@@ -13,7 +13,8 @@ describe('ToggleShopForm component testing', () => {
     {
       input: ShopStateStep.NO_ACTION,
       result: 'without'
-    },{
+    },
+    {
       input: ShopStateStep.FETCH_SHOP,
       result: 'with'
     },
