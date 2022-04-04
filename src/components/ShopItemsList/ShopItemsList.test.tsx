@@ -40,18 +40,18 @@ describe('ShopItemsList component testing', () => {
 
   it(`should render ShopItemsList component with "Wait a moment"`, () => {
     store.dispatch({
-    type: ShopItemsActionTypes.GO_TO_SHOP_STATE_STEP,
-    payload: ShopStateStep.FETCH_SHOP
-  })
+      type: ShopItemsActionTypes.GO_TO_SHOP_STATE_STEP,
+      payload: ShopStateStep.FETCH_SHOP
+    })
     render(<Provider store={store}><ShopItemsList keyWord='' /></Provider>);
-    expect(screen.getByText(/Wait a moment/)).toBeEnabled();
-  })
+      expect(screen.getByText(/Wait a moment/)).toBeEnabled();
+    })
 
   it(`should render ShopItemsList component with "Strange. There are no items in the shop?"`, () => {
     store.dispatch({
-    type: ShopItemsActionTypes.GO_TO_SHOP_STATE_STEP,
-    payload: ShopStateStep.SHOW_SHOP
-  })
+      type: ShopItemsActionTypes.GO_TO_SHOP_STATE_STEP,
+      payload: ShopStateStep.SHOW_SHOP
+    })
     render(<Provider store={store}><ShopItemsList keyWord='' /></Provider>);
     expect(screen.getByText(/Strange. There are no items in the shop/)).toBeEnabled();
   })
