@@ -5,6 +5,8 @@ import thunk from 'redux-thunk';
 import { ShopItemsActionTypes, ShopStateStep } from '../../interfaces/shopItemAction';
 import { rootReducer } from '../../stateManagement/reducers';
 import ShopItemsList from './ShopItemsList';
+import fakeItems from '../../utils/fakeItemsData';
+
 
 describe('ShopItemsList component testing', () => {
   let store = createStore(rootReducer, applyMiddleware(thunk));
@@ -54,5 +56,23 @@ describe('ShopItemsList component testing', () => {
     })
     render(<Provider store={store}><ShopItemsList keyWord='' /></Provider>);
     expect(screen.getByText(/Strange. There are no items in the shop/)).toBeEnabled();
+  })
+
+  it('should render ShopItemsForm component with error message', () => {
+    store.dispatch({
+      type: ShopItemsActionTypes.FETCH_SHOP_ITEMS_ERROR,
+      payload: 'any-error-message'
+    })
+    render(<Provider store={store}><ShopItemsList keyWord='' /></Provider>);
+    expect(screen.getByText('any-error-message')).toBeEnabled();
+  })
+
+  it('should render ShopItemsForm component with success message', () => {
+    store.dispatch({
+      type: ShopItemsActionTypes.FETCH_SHOP_ITEMS_SUCCESS,
+      payload: fakeItems
+    })
+    render(<Provider store={store}><ShopItemsList keyWord='' /></Provider>);
+    expect(screen.getByText('Find items to add them in your cart')).toBeEnabled();
   })
 })
