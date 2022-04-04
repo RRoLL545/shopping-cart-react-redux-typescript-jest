@@ -105,7 +105,7 @@ describe('ShopItemsList component testing', () => {
         payload: fakeItems
       });
       render(<Provider store={store}><ShopItemsList keyWord={testCase.input} /></Provider>);
-      const filteredItems = screen.getAllByText(/Add/);
+      const filteredItems = screen.getAllByRole('button');
       expect(filteredItems.length === testCase.result).toBeTruthy();
     })
   })

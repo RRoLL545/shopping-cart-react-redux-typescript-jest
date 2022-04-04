@@ -17,7 +17,7 @@ const ShopItemsList = (props: {keyWord: string}): JSX.Element => {
   const {fetchShopItems} = useActions();
   useEffect(() => {
     shopStateStep === ShopStateStep.FETCH_SHOP && fetchShopItems();
-  }, []);
+  });
   
   if (shopStateStep === ShopStateStep.NO_ACTION || shopStateStep === ShopStateStep.HIDE_SHOP) {
     return <></>
