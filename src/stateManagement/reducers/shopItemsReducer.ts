@@ -20,7 +20,7 @@ export const shopItemsReducer = (state: ShopState = initialState, action: ShopIt
         shopItems: [],
         errorMessage: '',
         errorStatus: false,
-        shopStateStep: ShopStateStep.FETCH_SHOP
+        shopStateStep: ShopStateStep.SHOW_SHOP
       }
     case ShopItemsActionTypes.FETCH_SHOP_ITEMS_SUCCESS:
       return {
@@ -28,7 +28,7 @@ export const shopItemsReducer = (state: ShopState = initialState, action: ShopIt
         shopItems: action.payload,
         errorMessage: '',
         errorStatus: false,
-        shopStateStep: ShopStateStep.FETCH_SHOP
+        shopStateStep: ShopStateStep.SHOW_SHOP
       }
     case ShopItemsActionTypes.FETCH_SHOP_ITEMS_ERROR:
       return {
@@ -36,7 +36,7 @@ export const shopItemsReducer = (state: ShopState = initialState, action: ShopIt
         shopItems: [],
         errorMessage: action.payload,
         errorStatus: true,
-        shopStateStep: ShopStateStep.FETCH_SHOP
+        shopStateStep: ShopStateStep.SHOW_SHOP
       }
     case ShopItemsActionTypes.GO_TO_SHOP_STATE_STEP:
       return {
