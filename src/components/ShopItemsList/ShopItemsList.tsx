@@ -51,6 +51,12 @@ const ShopItemsList = (props: {keyWord: string}): JSX.Element => {
     return item.name.toLowerCase().replace(/\s/g, '').includes(keyWord.toLowerCase());
   });
 
+  if(!foundShopItems.length) return (
+    <div className="shop-items-list">
+      No items with input text found! No matches!
+    </div>
+  )
+
   return (
     <div className="shop-items-list">
       {foundShopItems.map(shopItem => {

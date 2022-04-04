@@ -75,4 +75,38 @@ describe('ShopItemsList component testing', () => {
     render(<Provider store={store}><ShopItemsList keyWord='' /></Provider>);
     expect(screen.getByText('Find items to add them in your cart')).toBeEnabled();
   })
+
+  it('should render ShopItemsForm component with no matches message', () => {
+    store.dispatch({
+      type: ShopItemsActionTypes.FETCH_SHOP_ITEMS_SUCCESS,
+      payload: fakeItems
+    })
+    render(<Provider store={store}><ShopItemsList keyWord='any-bad-keyword' /></Provider>);
+    expect(screen.getByText('No items with input text found! No matches!')).toBeEnabled();
+  });
+
+  [
+    {
+      input: '4',
+      result: 1
+    },
+    {
+      input: 'any',
+      result: 5
+    },
+    {
+      input: 'lol',
+      result: 2
+    }
+  ].forEach(testCase => {
+    it(`should render ${testCase.result} items`, () => {
+      store.dispatch({
+        type: ShopItemsActionTypes.FETCH_SHOP_ITEMS_SUCCESS,
+        payload: fakeItems
+      });
+      render(<Provider store={store}><ShopItemsList keyWord={testCase.input} /></Provider>);
+      const filteredItems = screen.getAllByText(/Add/);
+      expect(filteredItems.length === testCase.result).toBeTruthy();
+    })
+  })
 })

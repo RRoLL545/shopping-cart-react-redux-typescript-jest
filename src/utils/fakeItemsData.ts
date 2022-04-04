@@ -29,14 +29,14 @@ const fakeItems: ItemData[] = [
     count: 4,
     id: 4,
     imageUrl: 'any-image-url-4',
-    name: 'any-name-4',
+    name: 'any-name-4-lol',
     price: 4
   },
   {
     count: 5,
     id: 5,
     imageUrl: 'any-image-url-5',
-    name: 'any-name-5',
+    name: 'any-name-5-lol',
     price: 5
   }
 ];
