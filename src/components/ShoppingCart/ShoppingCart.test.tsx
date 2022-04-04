@@ -1,11 +1,9 @@
 import { render, screen } from '@testing-library/react';
-import userEvent from '@testing-library/user-event';
 import { Provider } from 'react-redux';
 import { applyMiddleware, createStore } from 'redux';
 import thunk from 'redux-thunk';
 import { CartItemsActionTypes, StateStep } from '../../interfaces/cartItemAction';
 import { rootReducer } from '../../stateManagement/reducers';
-import fakeItems from '../../utils/fakeItemsData';
 import ShoppingCart from './ShoppingCart';
 
 describe('ShoppingCart component testing', () => {
