@@ -32,11 +32,11 @@ const CartItemList = (): JSX.Element => {
   
   return (
     <>
-    {cartItems.map(cartItem => {
-      return (
-        <CartItemView id={cartItem.id} imageUrl={cartItem.imageUrl} name={cartItem.name} price={cartItem.price} count={cartItem.count} key={cartItem.id}/>
-      )
-    })}
+      {cartItems.map(cartItem => {
+        return (
+          <CartItemView id={cartItem.id} imageUrl={cartItem.imageUrl} name={cartItem.name} price={cartItem.price} count={cartItem.count} key={cartItem.id}/>
+        )
+      })}
     </>
   )
 }
