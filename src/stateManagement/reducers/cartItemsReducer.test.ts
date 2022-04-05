@@ -98,7 +98,7 @@ describe('cartItemsReducer testing', () => {
       }
     },
     {
-      description: 'should not increase item with id 1 count in Cart',
+      description: 'should increase item with id 1 count in Cart',
       inputAction: {
         payload: 1,
         type: CartItemsActionTypes.INCREMENT_CART_ITEM_COUNT
