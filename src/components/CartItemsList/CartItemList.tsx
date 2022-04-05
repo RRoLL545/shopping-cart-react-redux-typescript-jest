@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { useActions } from '../../hooks/useActions';
 import useTypedSelector from '../../hooks/useTypedSelector';
+import { StateStep } from '../../interfaces/cartItemAction';
 import CartItemView from '../CartItemView/CartItemView';
 import './CartItemList.css';
 
@@ -9,13 +10,13 @@ import './CartItemList.css';
  * @returns CartItemList element
  */
 const CartItemList = (): JSX.Element => {
-  const {itemsLoading, cartItems, errorMessage, errorStatus} = useTypedSelector(state => state.cartState);
+  const {itemsLoading, cartItems, errorMessage, errorStatus, stateStep} = useTypedSelector(state => state.cartState);
 
   const {fetchCartItems} = useActions();
 
   useEffect(() => {
-    fetchCartItems();
-  }, []);
+    stateStep === StateStep.FETCH_CART_ITEMS && fetchCartItems();
+  });
 
   if (itemsLoading) {
     return <h1>Loading...</h1>
@@ -31,11 +32,11 @@ const CartItemList = (): JSX.Element => {
   
   return (
     <>
-    {cartItems.map(cartItem => {
-      return (
-        <CartItemView id={cartItem.id} imageUrl={cartItem.imageUrl} name={cartItem.name} price={cartItem.price} count={cartItem.count} key={cartItem.id}/>
-      )
-    })}
+      {cartItems.map(cartItem => {
+        return (
+          <CartItemView id={cartItem.id} imageUrl={cartItem.imageUrl} name={cartItem.name} price={cartItem.price} count={cartItem.count} key={cartItem.id}/>
+        )
+      })}
     </>
   )
 }

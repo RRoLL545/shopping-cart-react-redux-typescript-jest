@@ -20,7 +20,7 @@ const CountControl = (props: CountControlData): JSX.Element => {
   return (
     <div className={`item-control-tab`}>
       <button className="controls-button item-control item-minus" data-item-id={id} onClick={decrementCartItemCount}>-</button>
-      <div className={`item-quantity item-id-${id}`}>{count}</div>
+      <div className="item-quantity">{count}</div>
       <button className="controls-button item-control item-plus" data-item-id={id} onClick={incrementCartItemCount}>+</button>
     </div>
   )
@@ -35,7 +35,6 @@ export default CountControl;
 const decrementCartItemCount = (e: React.MouseEvent<HTMLButtonElement>): void => {
   const clickedButton = e.target as HTMLButtonElement;
   const itemId: number = parseInt(clickedButton.dataset.itemId as unknown as string, 10);
-  //TODO error
   decrementItemCount(itemId);
 }
 
@@ -46,8 +45,5 @@ const decrementCartItemCount = (e: React.MouseEvent<HTMLButtonElement>): void =>
 const incrementCartItemCount = (e: React.MouseEvent<HTMLButtonElement>): void =>{
   const clickedButton = e.target as HTMLButtonElement;
   const itemId: number = parseInt(clickedButton.dataset.itemId as unknown as string, 10);
-  //TODO error
   incrementItemCount(itemId);
 }
-
-//TODO заменить на одну чистую функцию с передачей id и textContent

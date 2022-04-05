@@ -10,7 +10,7 @@ const initialState: CartState = {
   itemsLoading: false,
   errorMessage: '',
   errorStatus: false,
-  stateStep: StateStep.CART_MANAGE
+  stateStep: StateStep.FETCH_CART_ITEMS
 }
 
 /**

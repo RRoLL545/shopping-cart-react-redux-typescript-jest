@@ -17,8 +17,11 @@ const ShopItemsList = (props: {keyWord: string}): JSX.Element => {
   const {fetchShopItems} = useActions();
   useEffect(() => {
     shopStateStep === ShopStateStep.FETCH_SHOP && fetchShopItems();
-  }, []);
+  });
   
+  if (shopStateStep === ShopStateStep.NO_ACTION || shopStateStep === ShopStateStep.HIDE_SHOP) {
+    return <></>
+  }
   if (itemsLoading) {
     return (
       <div className="shop-items-list">
@@ -47,6 +50,12 @@ const ShopItemsList = (props: {keyWord: string}): JSX.Element => {
   const foundShopItems: ItemData[] = shopItems.filter( item => {
     return item.name.toLowerCase().replace(/\s/g, '').includes(keyWord.toLowerCase());
   });
+
+  if(!foundShopItems.length) return (
+    <div className="shop-items-list">
+      No items with input text found! No matches!
+    </div>
+  )
 
   return (
     <div className="shop-items-list">
