@@ -157,4 +157,12 @@ export const fakeItemsReduced: ItemData[] = [
   }
 ];
 
+export const fakeItemIncreased: ItemData = {
+  count: 2,
+  id: 1,
+  imageUrl: 'any-image-url-1',
+  name: 'any-name-1',
+  price: 1
+}
+
 export default fakeItems;
