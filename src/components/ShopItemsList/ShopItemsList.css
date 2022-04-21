@@ -1,7 +1,0 @@
-.shop-items-list {
-  padding: 10px 20px;
-  overflow: auto;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-}

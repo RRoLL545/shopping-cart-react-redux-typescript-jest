@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/shopping-cart-react-redux-typescript-jest/static/css/main.f5b23c40.css",
+    "main.js": "/shopping-cart-react-redux-typescript-jest/static/js/main.44e21329.js",
+    "static/media/search-icon.png": "/shopping-cart-react-redux-typescript-jest/static/media/search-icon.06aaae4d2daacad0d8f2.png",
+    "static/media/plus-icon-rotate.png": "/shopping-cart-react-redux-typescript-jest/static/media/plus-icon-rotate.ae7176faf4de74b19192.png",
+    "static/media/instagram-logo.svg": "/shopping-cart-react-redux-typescript-jest/static/media/instagram-logo.c43bc331f889c0942fb4.svg",
+    "static/media/vk-logo.svg": "/shopping-cart-react-redux-typescript-jest/static/media/vk-logo.6079f47cdb15b5d96afd.svg",
+    "static/media/git-hub-logo.svg": "/shopping-cart-react-redux-typescript-jest/static/media/git-hub-logo.8299ad785d38ad5ac59d.svg",
+    "index.html": "/shopping-cart-react-redux-typescript-jest/index.html",
+    "static/media/telegram-logo.svg": "/shopping-cart-react-redux-typescript-jest/static/media/telegram-logo.a7c661794eb8d5be316c.svg",
+    "static/media/you-tube-logo.svg": "/shopping-cart-react-redux-typescript-jest/static/media/you-tube-logo.ed2f31477abe6d306c52.svg",
+    "main.f5b23c40.css.map": "/shopping-cart-react-redux-typescript-jest/static/css/main.f5b23c40.css.map",
+    "main.44e21329.js.map": "/shopping-cart-react-redux-typescript-jest/static/js/main.44e21329.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f5b23c40.css",
+    "static/js/main.44e21329.js"
+  ]
+}
