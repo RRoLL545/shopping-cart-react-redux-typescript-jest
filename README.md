@@ -2,7 +2,7 @@
 
 1. Project [task](https://github.com/optimaxdev/frontend-test/tree/master)
 2. Source code [github src](https://github.com/RRoLL545/shopping-cart-react-redux-typescript-jest)
-3. Deploy [link](https://rroll545.github.io/Shopping-cart/)
+3. Deploy [link](https://rroll545.github.io/shopping-cart-react-redux-typescript-jest/)
 
 
 ## Getting Started
